@@ -55,7 +55,7 @@ void httpclientworker::replyFinished(QNetworkReply *myreply)
 
         xr1.readNext();
         while (1) {
-            if (xr1.text().contains("KuD 1 Gr. 2")) {
+            if (xr1.text().contains("KuD 3 Gr. 2")) {
                 idMatch[currentId] = 1;
             }
             xr1.readNext();

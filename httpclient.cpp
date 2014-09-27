@@ -73,7 +73,7 @@ void HttpClient::replyFinished(QNetworkReply* reply)
               if (!xr.text().isEmpty())
               {
                   between.append(xr.text().toString());
-                  if (xr.text().contains("KuD 1 Gr. 2")) {
+                  if (xr.text().contains("KuD 3 Gr. 2")) {
                       match2 = true;
                   }
               } /*else if (xr.tokenType() == QXmlStreamReader::EntityReference) {
