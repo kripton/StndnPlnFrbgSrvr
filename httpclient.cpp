@@ -13,7 +13,7 @@ QString HttpClient::getHtml()
     qDebug() << "Connection" << connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(replyFinished(QNetworkReply*)));
     thread->start();
 
-    manager->get(QNetworkRequest(QUrl("http://www.h-ab.de/fileadmin/dokumente/stundenplan/klassisch/KuD%2013.html")));
+    manager->get(QNetworkRequest(QUrl("http://www.h-ab.de/fileadmin/dokumente/stundenplan/klassisch/KuD13.html")));
     return classHtml;
 }
 
