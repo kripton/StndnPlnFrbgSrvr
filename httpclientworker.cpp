@@ -10,7 +10,7 @@ void httpclientworker::doWork()
 {
     manager = new QNetworkAccessManager();
     connect(manager, SIGNAL(finished(QNetworkReply*)), this, SLOT(replyFinished(QNetworkReply*)));
-    manager->get(QNetworkRequest(QUrl("http://www.h-ab.de/fileadmin/dokumente/stundenplan/klassisch/KuD13.html")));
+    manager->get(QNetworkRequest(QUrl("https://www.h-ab.de/fileadmin/dokumente/stundenplan/klassisch/KuD13.html")));
 }
 
 void httpclientworker::replyFinished(QNetworkReply *myreply)
@@ -55,7 +55,7 @@ void httpclientworker::replyFinished(QNetworkReply *myreply)
 
         xr1.readNext();
         while (1) {
-            if (xr1.text().contains("KuD 3 Gr. 2")) {
+            if (xr1.text().contains("KuD 6 Gr. 2")) {
                 idMatch[currentId] = 1;
             }
             xr1.readNext();
